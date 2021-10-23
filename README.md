@@ -6,14 +6,19 @@ List of c# codeSippents
 <details open="open">
   <summary>Table of Contents</summary>
   <ol>
-    <li><a href="#package-extension">Package Extension</a></li>
-    <li><a href="#Installation">Installation</a></li>
-    <li><a href="#Updating">Updating</a></li>
-    <li><a href="#creating-releases">Creating Releases</a></li>    
+    <li><a href="#Debug">Debug</a></li>
+    <li><a href="#CreateAssetMenu">CreateAssetMenu</a></li>
   </ol>
 </details>
 
-1. creasset - [CreateAssetMenu(fileName = "$name$", menuName = "ScriptableObjects/$name$")]
-2. De - Debug.Log("$msg$");
-3. 
+
+## Debug
+
+Shortcut - `De`
+
+```c#
+Debug.Log("$msg$");
+```
+
+## CreateAssetMenu
 
