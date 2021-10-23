@@ -11,7 +11,7 @@ List of c# codeSippents
     <li><a href="#Namespace">Namespace</a></li>
     <li><a href="#RequireComponent">RequireComponent</a></li>
     <li><a href="#SerializeField">SerializeField</a></li>
-    <li><a href="#Custom Unity Event">Custom Unity Event</a></li>
+    <li><a href="#CustomUnityEvent">CustomUnityEvent</a></li>
   </ol>
 </details>
 
@@ -46,7 +46,7 @@ Shortcut - `ser`
 [SerializeField] $type$ $name$;
 ```
 
-## Custom Unity Event
+## CustomUnityEvent
 Shortcut - `uev`
 ```c#
       //using UnityEngine.Events;
