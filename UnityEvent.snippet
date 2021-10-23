@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Custom UnityEvent</Title>
+			<Author>DimaTi</Author>
+			<Description>Create Custom UnityEvent</Description>
+			<Shortcut>uev</Shortcut>
+		</Header>
+		<Snippet>
+			<Code Language="CSharp">
+        <![CDATA[
+			//using UnityEngine.Events;
+      
+      public UnityEvent_$var$ $name$;
+      
+      [System.Serializable] public class UnityEvent_$var$ : UnityEvent<$var$>{}
+      ]]></Code>
+			<Declarations>
+				<Literal>
+					<ID>var</ID>
+					<ToolTip>write var type</ToolTip>
+					<Default>int</Default>
+				</Literal>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>name of variable</ToolTip>
+          <Default>OnUnityEvent</Default>
+        </Literal>
+			</Declarations>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
