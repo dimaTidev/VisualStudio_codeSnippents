@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>PropertyDrawer</Title>
+			<Author>DimaTi</Author>
+			<Description>Create PropertyDrawer</Description>
+			<Shortcut>attributePropertyDrawer</Shortcut>
+		</Header>
+		<Snippet>
+			<Code Language="CSharp">
+        <![CDATA[        
+      //using UnityEditor;
+
+			[CustomPropertyDrawer(typeof($target$))]
+			public class $target$_Drawer : PropertyDrawer
+			{
+					public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
+					{
+							$target$ attr = attribute as $target$;
+              
+              //if(property.objectReferenceValue.GetType() != typeof(List<string>))
+              EditorGUI.PropertyField(position, property);
+					}
+			}
+      ]]></Code>
+			<Declarations>
+				<Literal>
+					<ID>target</ID>
+					<ToolTip>target type</ToolTip>
+					<Default>type</Default>
+				</Literal>
+			</Declarations>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

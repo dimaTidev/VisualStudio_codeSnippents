@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>UnityEditor</Title>
+			<Author>DimaTi</Author>
+			<Description>Create UnityEditor</Description>
+			<Shortcut>uedit</Shortcut>
+		</Header>
+		<Snippet>
+			<Code Language="CSharp">
+        <![CDATA[        
+      #if UNITY_EDITOR
+      [CustomEditor(typeof($type$))]
+      [CanEditMultipleObjects]
+      public class $type$Editor : Editor
+      {
+          SerializedProperty damageProp;
+
+          void OnEnable()
+          {
+              damageProp = serializedObject.FindProperty ("damage");
+          }
+
+          public override void OnInspectorGUI()
+          {
+              serializedObject.Update ();
+              
+              EditorGUILayout.PropertyField (damageProp, new GUIContent ("Property"));
+
+              serializedObject.ApplyModifiedProperties ();
+          }
+      }
+      #endif
+      ]]></Code>
+			<Declarations>
+				<Literal>
+					<ID>type</ID>
+					<ToolTip>write var type</ToolTip>
+					<Default>type</Default>
+				</Literal>
+			</Declarations>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
