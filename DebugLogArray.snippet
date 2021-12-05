@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Debug array</Title>
+			<Author>DimaTi</Author>
+			<Description>Inserts Debug.Log("") array;</Description>
+			<Shortcut>dearray</Shortcut>
+		</Header>    
+		<Snippet>
+			<Code Language="CSharp">
+        <![CDATA[
+            string deb = "";
+            for (int i = 0; i < $str$.Length; i++)
+                deb += $str$[i] + "/";
+            Debug.Log("deb: " + deb);
+      ]]></Code>
+			<Declarations>
+				<Literal>
+					<ID>str</ID>
+					<ToolTip>Replace with your array.</ToolTip>
+					<Default>array</Default>
+				</Literal>
+			</Declarations>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

@@ -1,32 +1,27 @@
-<?xml version="1.0" encoding="utf-8"?>
-<CodeSnippets xmlns="">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
 	<CodeSnippet Format="1.0.0">
 		<Header>
-			<Title>Custom UnityEvent</Title>
+			<Title>Custom UnityEvent_type</Title>
 			<Author>DimaTi</Author>
-			<Description>Create Custom UnityEvent</Description>
-			<Shortcut>uev</Shortcut>
-		</Header>
+			<Description>Insert Custom UnityEvent with type</Description>
+			<Shortcut>Uevent</Shortcut>
+		</Header>    
 		<Snippet>
 			<Code Language="CSharp">
         <![CDATA[
-			//using UnityEngine.Events;
+      using UnityEngine.Events;
       
-      public UnityEvent_$var$ $name$;
-      
-      [System.Serializable] public class UnityEvent_$var$ : UnityEvent<$var$>{}
+      [SerializeField] UnityEvent_$extension$ unityEvent_$extension$;
+
+      [System.Serializable] public class UnityEvent_$extension$ : UnityEvent<$extension$>{}
       ]]></Code>
 			<Declarations>
 				<Literal>
-					<ID>var</ID>
-					<ToolTip>write var type</ToolTip>
+					<ID>extension</ID>
+					<ToolTip>Replace with type.</ToolTip>
 					<Default>int</Default>
 				</Literal>
-        <Literal>
-          <ID>name</ID>
-          <ToolTip>name of variable</ToolTip>
-          <Default>OnUnityEvent</Default>
-        </Literal>
 			</Declarations>
 		</Snippet>
 	</CodeSnippet>
