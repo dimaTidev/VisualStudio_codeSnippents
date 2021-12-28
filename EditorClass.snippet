@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Editor Class</Title>
+      <Author>Dreamer</Author>
+      <Description>Creates Editor Class</Description>
+      <Shortcut>Editor</Shortcut>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[
+        namespace DimaTi.EditorInspector
+        {
+            #if UNITY_EDITOR
+            [CanEditMultipleObjects]
+            [CustomEditor(typeof($className$))]
+            public class $className$_editor : Editor
+            {
+            $className$ scr;
+
+                void OnEnable()
+                {
+                    scr = target as $className$;
+                }
+    
+                public override void OnInspectorGUI()
+                {
+                    DrawDefaultInspector();
+                  
+                    GUILayout.BeginVertical("Helpbox");
+                    if (GUILayout.Button("Button"))
+                    {
+
+                    }
+                    GUILayout.EndVertical();
+                }
+            }
+            #endif
+          }
+        ]]>
+      </Code>
+      <Declarations>
+        <Literal>
+          <ID>className</ID>
+          <ToolTip>Class Name</ToolTip>
+          <Default>GameData</Default>
+        </Literal>
+        <Literal>
+          <ID>order</ID>
+          <ToolTip>MenuItem Order</ToolTip>
+          <Default>30</Default>
+        </Literal>
+      </Declarations>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
