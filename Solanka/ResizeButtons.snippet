@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>ResizeChilds</Title>
+			<Author>DimaTi</Author>
+			<Description>Resize childs</Description>
+			<Shortcut>ResizeChilds</Shortcut>
+		</Header>    
+		<Snippet>
+			<Code Language="CSharp">
+        <![CDATA[
+      void ResizeChilds(Transform parent, int targetSize)
+      {
+          if (parent == null)
+          {
+              Debug.LogError("Not exist parent!");
+              return;
+          }
+
+          if (parent.childCount == 0)
+          {
+              Debug.LogError("parent.childCount == 0!");
+              return;
+          }
+
+          int remaining = targetSize - parent.childCount;
+
+          if (remaining > 0) //add
+          {
+              for (int i = 0; i < remaining; i++)
+                  Instantiate(parent.GetChild(0), parent);
+              for (int i = remaining; i < parent.childCount; i++)
+                  parent.GetChild(i).gameObject.SetActive(true);
+          }
+          else //hide
+          {
+              List<GameObject> toDestroy = new List<GameObject>();
+              //remaining = Mathf.Abs(remaining);
+              for (int i = 0; i < targetSize; i++)
+                  parent.GetChild(i).gameObject.SetActive(true);
+              for (int i = targetSize; i < parent.childCount; i++)
+                  toDestroy.Add(parent.GetChild(i).gameObject); //Это фиксит проблему SiblineIndex который постоянно используется. И выключеные объекты все портят
+                                                                //parent.GetChild(i).gameObject.SetActive(false); 
+
+              for (int i = 0; i < toDestroy.Count; i++) //TODO: переделать destroy на что-то производительнее
+                  DestroyImmediate(toDestroy[i]);
+          }
+      }]]></Code>
+			<Declarations>
+				<Literal>
+					<ID>str</ID>
+					<ToolTip></ToolTip>
+					<Default></Default>
+				</Literal>
+			</Declarations>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

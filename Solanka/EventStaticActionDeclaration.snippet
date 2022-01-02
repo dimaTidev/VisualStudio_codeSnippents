@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>static event Action Declaration</Title>
+			<Author>Dreamer</Author>
+			<Description>Inserts static event Action Declaration</Description>
+			<Shortcut>evds</Shortcut>
+		</Header>    
+		<Snippet>
+			<Code Language="CSharp"><![CDATA[public static event Action<$type$> $delegate$;$end$]]></Code>
+			<Declarations>
+				<Literal>
+					<ID>type</ID>
+					<ToolTip>Replace with a Type.</ToolTip>
+					<Default>int</Default>
+				</Literal>
+				<Literal>
+					<ID>delegate</ID>
+					<ToolTip>Replace with an Identifier.</ToolTip>
+					<Default>OnClick</Default>
+				</Literal>
+			</Declarations>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

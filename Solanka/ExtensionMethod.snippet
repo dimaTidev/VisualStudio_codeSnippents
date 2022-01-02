@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>ExtensionMethod</Title>
+			<Author>Dreamer</Author>
+			<Description>Inserts Extension Method</Description>
+			<Shortcut>em</Shortcut>
+		</Header>    
+		<Snippet>
+			<Code Language="CSharp"><![CDATA[
+	      public static $returnType$ $methodName$(this $type$ the$type$)
+	      {
+          $end$
+          return $returnValue$;
+	      }
+      ]]></Code>
+			<Declarations>
+        <Literal>
+          <ID>returnType</ID>
+          <ToolTip>Method Return Type</ToolTip>
+          <Default>Vector3</Default>
+        </Literal>
+        <Literal>
+          <ID>methodName</ID>
+          <ToolTip>Method Name</ToolTip>
+          <Default>DoSomething</Default>
+        </Literal>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Extension Type</ToolTip>
+          <Default>Vector3</Default>
+        </Literal>
+        <Literal>
+          <ID>returnValue</ID>
+          <ToolTip>Method Return Value</ToolTip>
+          <Default>default</Default>
+        </Literal>
+      </Declarations>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

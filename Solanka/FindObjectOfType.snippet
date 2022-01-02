@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>FindObjectOfType</Title>
+			<Author>Dreamer</Author>
+			<Description>Inserts FindObjectOfType</Description>
+			<Shortcut>fot</Shortcut>
+		</Header>    
+		<Snippet>
+			<Code Language="CSharp"><![CDATA[$variable$ = FindObjectOfType<$type$>();$end$]]></Code>
+			<Declarations>
+				<Literal>
+					<ID>type</ID>
+					<ToolTip>Replace with a Type.</ToolTip>
+					<Default>int</Default>
+				</Literal>
+        <Literal>
+          <ID>variable</ID>
+          <ToolTip>Replace with a Identifier.</ToolTip>
+          <Default>variableName</Default>
+        </Literal>
+      </Declarations>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

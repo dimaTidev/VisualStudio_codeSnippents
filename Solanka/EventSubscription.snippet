@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Event Subscribe and Unsubscribe</Title>
+			<Author>Dreamer</Author>
+			<Description>Event Subscribe and Unsubscribe</Description>
+			<Shortcut>evs</Shortcut>
+		</Header>    
+		<Snippet>
+			<Code Language="CSharp"><![CDATA[
+		    $raiser$.$event$ += $delegate$;
+		    $raiser$.$event$ -= $delegate$;
+      ]]></Code>
+			<Declarations>
+        <Literal>
+          <ID>raiser</ID>
+          <ToolTip>Class or Object that raises the event</ToolTip>
+          <Default>Player</Default>
+        </Literal>
+        <Literal>
+          <ID>event</ID>
+          <ToolTip>Event Identifier</ToolTip>
+          <Default>OnClick</Default>
+        </Literal>
+        <Literal>
+					<ID>delegate</ID>
+					<ToolTip>Method called by subscriber</ToolTip>
+					<Default>PlayerClicked</Default>
+				</Literal>
+			</Declarations>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

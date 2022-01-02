@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Coroutine IEnumerator</Title>
+			<Author>Dreamer</Author>
+			<Description>Inserts Coroutine IEnumerator Method with yield WaitForSeconds Statement</Description>
+			<Shortcut>ciw</Shortcut>
+		</Header>    
+		<Snippet>
+			<Code Language="CSharp">
+            <![CDATA[
+        private IEnumerator $identifier$(float delay=$duration$)
+        {
+          yield return new WaitForSeconds(delay);
+          $end$
+        }
+      ]]></Code>
+			<Declarations>
+        <Literal>
+          <ID>identifier</ID>
+          <ToolTip>Replace with an Identifier.</ToolTip>
+          <Default>ExecuteAfterDelay</Default>
+        </Literal>
+        <Literal>
+          <ID>duration</ID>
+          <ToolTip>Delay duration.</ToolTip>
+          <Default>1f</Default>
+        </Literal>
+      </Declarations>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

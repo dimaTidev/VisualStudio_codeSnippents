@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>OnTriggerEnter (3D) with GetComponent</Title>
+			<Author>Dreamer</Author>
+			<Description>OnTriggerEnter with GetComponent Check and if Statement</Description>
+			<Shortcut>ot3</Shortcut>
+		</Header>    
+		<Snippet>
+			<Code Language="CSharp">
+            <![CDATA[
+        private void OnTriggerEnter(Collider other)
+        {
+          var the$component$ = other.GetComponent<$component$>();
+		      if(the$component$)
+          {
+            $end$            
+          }
+        }
+      ]]></Code>
+			<Declarations>
+        <Literal>
+          <ID>component</ID>
+          <ToolTip>Replace with Component Type.</ToolTip>
+          <Default>Enemy</Default>
+        </Literal>
+      </Declarations>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>Extension Method Class void</Title>
+			<Author>Dreamer</Author>
+			<Description>Creates Class for Extension Methods with void Extension Method</Description>
+			<Shortcut>emcv</Shortcut>
+		</Header>    
+		<Snippet>
+			<Code Language="CSharp">
+        <![CDATA[
+          public static class $type$Extensions
+          {
+	          public static void $methodName$(this $type$ the$type$)
+	          {
+              $end$
+	          }
+          }
+        ]]>
+      </Code>
+			<Declarations>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Extension Type</ToolTip>
+          <Default>Vector3</Default>
+        </Literal>
+        <Literal>
+          <ID>methodName</ID>
+          <ToolTip>Method Name</ToolTip>
+          <Default>DoSomething</Default>
+        </Literal>
+      </Declarations>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+  <CodeSnippet Format="1.0.0">
+    <Header>
+      <Title>Scriptable Object Class</Title>
+      <Author>Dreamer</Author>
+      <Description>Creates Scriptable Object Class</Description>
+      <Shortcut>soc</Shortcut>
+    </Header>
+    <Snippet>
+      <Code Language="CSharp">
+        <![CDATA[
+          [CreateAssetMenu(fileName = "$className$ (1)", menuName = "$className$", order = $order$)]
+          public class $className$ : ScriptableObject
+          {
+            $end$
+	        }
+        ]]>
+      </Code>
+      <Declarations>
+        <Literal>
+          <ID>className</ID>
+          <ToolTip>Class Name</ToolTip>
+          <Default>GameData</Default>
+        </Literal>
+        <Literal>
+          <ID>order</ID>
+          <ToolTip>MenuItem Order</ToolTip>
+          <Default>30</Default>
+        </Literal>
+      </Declarations>
+    </Snippet>
+  </CodeSnippet>
+</CodeSnippets>
