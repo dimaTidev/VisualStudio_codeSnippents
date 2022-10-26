@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>[SerializeField] = null</Title>
+			<Author>DimaTi</Author>
+			<Description>Create variable = null with [SerializeField]</Description>
+			<Shortcut>sfn</Shortcut>
+		</Header>
+		<Snippet>
+			<Code Language="CSharp"><![CDATA[[SerializeField] $type$ $name$ = $null$;$end$]]></Code>
+			<Declarations>
+        <Literal>
+          <ID>type</ID>
+          <ToolTip>Type</ToolTip>
+          <Default>Transform</Default>
+        </Literal>
+        <Literal>
+          <ID>name</ID>
+          <ToolTip>name</ToolTip>
+          <Default>fieldName</Default>
+        </Literal>
+		<Literal>
+			<ID>null</ID>
+			<ToolTip>argument</ToolTip>
+			<Default>null</Default>
+		</Literal>
+			</Declarations>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
